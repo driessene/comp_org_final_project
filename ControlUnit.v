@@ -10,7 +10,7 @@ module ControlUnit (
 	
 	always @ (negedge CLK) begin
 		CurrentState = NextState;
-	end;
+	end
 	
 	always @ (*) begin
 		//Load1
@@ -191,9 +191,9 @@ module ControlUnit (
 				3'd3: NextState = 6;
 				3'd4: NextState = 8;
 				3'd5: NextState = 10;
-			end
+			endcase
 		end
 		
-	end;
+	end
 	
 endmodule
