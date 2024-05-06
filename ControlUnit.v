@@ -5,7 +5,8 @@ module ControlUnit (
 	output reg ALUSel, PCInc, memRW,
 	output reg [1:0] BusSel);
 	
-	reg [3:0] CurrentState, NextState;
+	reg [3:0] CurrentState = 4'd12;
+	reg [3:0] NextState = 4'd12;
 	
 	
 	always @ (negedge CLK) begin
@@ -175,15 +176,15 @@ module ControlUnit (
 		
 		//Fetch 3
 		end else if (CurrentState == 14) begin 
-			ARLoad = 0;
-			DRLoad = 1;
+			ARLoad = 1;
+			DRLoad = 0;
 			PCLoad = 0;
 			ACLoad = 0;
 			IRLoad = 1;
 			ALUSel = 0;
-			PCInc = 1; 
+			PCInc = 0; 
 			memRW = 1;
-			BusSel = 0;
+			BusSel = 1;
 			case (IR)
 				3'd0: NextState = 0;
 				3'd1: NextState = 2;

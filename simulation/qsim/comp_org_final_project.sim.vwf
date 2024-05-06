@@ -207,15 +207,12 @@ TRANSITION_LIST("BusSel[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 40.0;
 		NODE
 		{
-			REPEAT = 9;
+			REPEAT = 10;
 			LEVEL 1 FOR 20.0;
 			LEVEL 0 FOR 80.0;
 		}
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -224,15 +221,12 @@ TRANSITION_LIST("BusSel[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
 		NODE
 		{
-			REPEAT = 9;
-			LEVEL 1 FOR 20.0;
+			REPEAT = 10;
 			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 20.0;
 		}
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 60.0;
 	}
 }
 
@@ -241,15 +235,12 @@ TRANSITION_LIST("ACLoad")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
 		NODE
 		{
-			REPEAT = 9;
-			LEVEL 1 FOR 20.0;
+			REPEAT = 10;
 			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 20.0;
 		}
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 60.0;
 	}
 }
 
@@ -267,15 +258,14 @@ TRANSITION_LIST("ARLoad")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 40.0;
 		NODE
 		{
-			REPEAT = 9;
+			REPEAT = 10;
 			LEVEL 1 FOR 20.0;
-			LEVEL 0 FOR 80.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 40.0;
 		}
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -298,15 +288,21 @@ TRANSITION_LIST("DRLoad")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 20.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
 		NODE
 		{
 			REPEAT = 9;
 			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 60.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
 		}
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
 	}
 }
 
@@ -342,12 +338,15 @@ TRANSITION_LIST("IRLoad")
 	NODE
 	{
 		REPEAT = 1;
+		LEVEL 0 FOR 40.0;
 		NODE
 		{
-			REPEAT = 10;
-			LEVEL 0 FOR 80.0;
+			REPEAT = 9;
 			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 80.0;
 		}
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -365,12 +364,15 @@ TRANSITION_LIST("PCInc")
 	NODE
 	{
 		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
 		NODE
 		{
-			REPEAT = 10;
-			LEVEL 0 FOR 60.0;
-			LEVEL 1 FOR 40.0;
+			REPEAT = 9;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 80.0;
 		}
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 60.0;
 	}
 }
 
