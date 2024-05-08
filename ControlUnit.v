@@ -23,7 +23,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 0;
 			NextState = CurrentState + 1;
 			
@@ -36,7 +36,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 1;
 			NextState = 12;
 		
@@ -49,7 +49,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 3;
 			NextState = CurrentState + 1;
 		
@@ -62,7 +62,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 0;
+			memRW = 1;
 			BusSel = 1;
 			NextState = 12;
 		
@@ -75,7 +75,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 0;
 			NextState = CurrentState + 1;
 		
@@ -88,7 +88,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 1;
 			NextState = 12;
 		
@@ -101,7 +101,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 0;
 			NextState = CurrentState + 1;
 		
@@ -114,7 +114,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 1;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 1;
 			NextState = 12;
 		
@@ -127,7 +127,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 1;
 			NextState = 12;
 		
@@ -144,7 +144,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 1;
 			NextState = 12;
 		
@@ -157,7 +157,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 2;
 			NextState = CurrentState + 1;
 			
@@ -170,7 +170,7 @@ module ControlUnit (
 			IRLoad = 0;
 			ALUSel = 0;
 			PCInc = 1; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 0;
 			NextState = CurrentState + 1;
 		
@@ -183,7 +183,7 @@ module ControlUnit (
 			IRLoad = 1;
 			ALUSel = 0;
 			PCInc = 0; 
-			memRW = 1;
+			memRW = 0;
 			BusSel = 1;
 			case (IR)
 				3'd0: NextState = 0;
