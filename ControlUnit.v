@@ -3,11 +3,15 @@ module ControlUnit (
 	input Z,CLK,
 	output reg ARLoad, DRLoad, PCLoad, ACLoad, IRLoad,
 	output reg ALUSel, PCInc, memRW,
-	output reg [1:0] BusSel);
+	output reg [1:0] BusSel,
+	output reg [3:0] state);
 	
 	reg [3:0] CurrentState = 4'd12;
 	reg [3:0] NextState = 4'd12;
 	
+	always @(*) begin
+		state = CurrentState;
+	end
 	
 	always @ (negedge CLK) begin
 		CurrentState = NextState;

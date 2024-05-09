@@ -1,7 +1,7 @@
 module ArithmeticLogicUnit(
-	input [4:0] DBus, ACin,
+	input [7:0] DBus, ACin,
 	input ALUSel, CLK,
-	output reg [4:0] ACout
+	output reg [7:0] ACout
 );
 
 	always @(*) begin

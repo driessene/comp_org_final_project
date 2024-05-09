@@ -107,6 +107,13 @@ applicable agreement for further details.
 		(text "BusSel[1..0]" (rect 109 155 155 167)(font "Arial" ))
 		(line (pt 176 160)(pt 160 160)(line_width 3))
 	)
+	(port
+		(pt 176 176)
+		(output)
+		(text "state[3..0]" (rect 0 0 38 12)(font "Arial" ))
+		(text "state[3..0]" (rect 117 171 155 183)(font "Arial" ))
+		(line (pt 176 176)(pt 160 176)(line_width 3))
+	)
 	(drawing
 		(rectangle (rect 16 16 160 192)(line_width 1))
 	)
