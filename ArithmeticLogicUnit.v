@@ -1,14 +1,16 @@
 module ArithmeticLogicUnit(
 	input [7:0] DBus, ACin,
-	input ALUSel, CLK,
+	input [1:0] ALUSel, 
+	input CLK,
 	output reg [7:0] ACout
 );
 
 	always @(*) begin
-		if (ALUSel == 0) begin		// addition mode
+		if (ALUSel == 0)				// addition mode
 			ACout <= DBus + ACin;
-		end else begin				// subtraction mode
+		else if(ALUSel == 1)			// subtraction mode
 			ACout <= ACin - DBus;
-		end
+		else								// load mode
+			ACout <= DBus;
 	end
 endmodule
