@@ -1,7 +1,7 @@
 module MicroSequencer (
 	input [2:0] IR,
 	input [4:0] addrIn,
-	input CLK, sel,
+	input sel,
 	output reg [4:0] addrOut);
 
 	always @(*) begin
