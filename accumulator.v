@@ -1,3 +1,4 @@
+//Written By: Jayden
 module accumulator(
     input [7:0] ALUin,
     input CLK,
@@ -5,8 +6,9 @@ module accumulator(
     input ACInc,
     output reg [7:0] ACout,
 	 output reg Z
-);
+); 
 
+    //check if stored value is zero
 	always @(*) begin
 		if (ACout == 0)
 			Z = 1;
@@ -14,6 +16,7 @@ module accumulator(
 			Z = 0;
 	end
 
+    //load or increment on Clock
     always @(posedge CLK) begin
         if (ACLoad) begin
             ACout <= ALUin;

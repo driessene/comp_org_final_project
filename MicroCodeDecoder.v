@@ -1,3 +1,4 @@
+//Written By: Theo
 module MicroCodeDecoder (
 	input Z, 
 	input [12:0] MicroCode,
@@ -5,6 +6,7 @@ module MicroCodeDecoder (
 	output reg PCInc, memRW,
 	output reg [1:0] BusSel, ALUSel);
 	
+	//Set microOperations based on MicroCode input
 	always @ (*) begin
 		//Load To Address Register
 		if(MicroCode[12] || MicroCode[5])

@@ -1,3 +1,4 @@
+//Written By: Jayden
 module ArithmeticLogicUnit(
 	input [7:0] DBus, ACin,
 	input [1:0] ALUSel, 
